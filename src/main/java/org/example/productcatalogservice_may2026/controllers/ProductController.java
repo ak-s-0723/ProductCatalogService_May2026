@@ -50,6 +50,13 @@ public class ProductController {
     }
 
 
+    @GetMapping("products/{productId}/{userId}")
+    public ProductDto getUserDetailsBasedOnUserRole(@PathVariable Long productId, @PathVariable Long userId) {
+      Product product = productService.getProductBasedOnUserRole(productId,userId);
+      return from(product);
+    }
+
+
 
     @PutMapping("/products/{productId}")
     public ProductDto replaceProduct(@PathVariable Long productId,

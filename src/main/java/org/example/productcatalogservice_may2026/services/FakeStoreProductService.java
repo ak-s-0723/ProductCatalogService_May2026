@@ -30,6 +30,11 @@ public class FakeStoreProductService implements IProductService {
     }
 
     @Override
+    public Product getProductBasedOnUserRole(Long productId, Long userId) {
+        return null;
+    }
+
+    @Override
     public Product getProductById(Long id) {
        RestTemplate restTemplate = restTemplateBuilder.build();
 //       ResponseEntity<FakeStoreProductDto> fakeStoreProductDtoResponseEntity =

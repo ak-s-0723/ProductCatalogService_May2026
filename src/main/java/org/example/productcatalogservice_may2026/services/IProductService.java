@@ -17,4 +17,6 @@ public interface IProductService {
     void deleteProduct(Long id);
 
     List<Product> getAllActiveProducts();
+
+    Product getProductBasedOnUserRole(Long productId, Long userId);
 }
